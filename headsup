@@ -1,0 +1,14 @@
+If packages are missing, install/re-install in terminal:
+
+Install all required packages
+pip install pandas numpy scikit-learn joblib flask flask-cors matplotlib seaborn
+
+Or install individually:
+pip install pandas
+pip install numpy
+pip install scikit-learn
+pip install joblib
+pip install flask
+pip install flask-cors
+pip install matplotlib
+pip install seaborn
