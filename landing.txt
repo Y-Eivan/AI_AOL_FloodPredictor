@@ -1,0 +1,165 @@
+/* ============================================
+   LANDING PAGE STYLES
+   ============================================ */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23333" width="1200" height="800"/><text x="50%25" y="50%25" font-size="48" fill="%23666" text-anchor="middle" dominant-baseline="middle">Jakarta Cityscape</text></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: var(--font-6xl);
+    font-weight: var(--font-bold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: var(--line-height-tight);
+}
+
+.hero .highlight {
+    color: var(--primary-cyan);
+}
+
+.hero p {
+    font-size: var(--font-lg);
+    max-width: 700px;
+    margin-bottom: 40px;
+    line-height: var(--line-height-relaxed);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Why Us Section */
+.why-us {
+    padding: 100px 50px;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: var(--font-4xl);
+    color: var(--gray-900);
+    margin-bottom: 20px;
+    font-weight: var(--font-bold);
+}
+
+.why-us-subtitle {
+    color: var(--gray-700);
+    font-size: var(--font-base);
+    max-width: 800px;
+    margin: 0 auto 60px;
+    line-height: var(--line-height-relaxed);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Stats Section */
+.stats-section {
+    background: var(--gradient-purple);
+    padding: 80px 50px;
+    color: var(--white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: var(--font-5xl);
+    font-weight: var(--font-bold);
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: var(--font-base);
+    opacity: 0.9;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--gray-50);
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: var(--font-4xl);
+    color: var(--gray-900);
+    margin-bottom: 20px;
+    font-weight: var(--font-bold);
+}
+
+.cta-section p {
+    font-size: var(--font-lg);
+    color: var(--gray-700);
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: var(--line-height-relaxed);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: var(--font-3xl);
+    }
+
+    .hero p {
+        font-size: var(--font-base);
+    }
+
+    .why-us,
+    .stats-section,
+    .cta-section {
+        padding: 60px 20px;
+    }
+
+    .why-us h2,
+    .cta-section h2 {
+        font-size: var(--font-3xl);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
